@@ -105,7 +105,7 @@ h2{
     .barra-progreso {
         width: 22%; /* Progreso al 22% */
         height: 100%;
-        background: linear-gradient(to right, #ff5733, #ffbd69);
+        background: linear-gradient(to right, #a9c159, #cfdba4);
         text-align: center;
         color: white;
         font-weight: bold;
