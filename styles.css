@@ -1,115 +1,104 @@
-html{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
     background-color: #0c1124;
     color: white;
+    font-family: "Roboto", sans-serif;
 }
-header{
+header {
     background: linear-gradient(to bottom, #0c1124, #2e4f94);
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: center;
 }
-
-nav{
-    margin-top: 3%;
-}
-ul {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
 }
-
-ul li {
-    display: inline;
-}
-
-ul li a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    font-weight: 800;
     padding: 10px 20px;
     transition: 0.3s;
-    font-family: "Roboto", sans-serif;
-    font-weight: 800;
 }
-
-ul li a:hover {
+nav ul li a:hover {
     background: #555;
     border-radius: 5px;
 }
-
-h1{
-    color: white;
-    font-family: "Roboto", sans-serif;
+h1 {
     font-weight: 800;
     font-style: italic;
     text-align: center;
-    font-size: 60px;
+    font-size: 48px;
 }
 #pres-cont{
-    width: 100%;
-    padding-top: 50px;
+    padding-top: 40px;
 }
-#pres-cont img{
-    width: 20%;
-    margin: 0 40%;
-    
+#pres-cont img {
+    width: 50%;
+    max-width: 200px;
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 0;
 }
-h2{
-    color: white;
-    font-family: "Roboto", sans-serif;
+h2 {
     font-weight: 800;
-    font-style: normal;
-    text-align: center;
-    font-size: 60px;
+    font-size: 36px;
     color: #def398;
-    margin-top:120px ;
+    text-align: center;
+    margin-top: 40px;
 }
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 60%;
-    margin: 0 20%;
-    }
-.parent div{
-    font-family: "Roboto", sans-serif;
-    font-weight: 800;
-    font-style: normal;
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.parent div {
     text-align: center;
-    font-size: 36px;
-    padding: 3% 0;
-    margin: 1%;
-    border:2px solid #364375;
+    font-size: 18px;
+    padding: 15px;
+    border: 2px solid #364375;
     background-color: #1d2851;
     border-radius: 5%;
 }
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 1 / 3 / 2 / 4; }
-    .div4 { grid-area: 1 / 4 / 2 / 5; }
-    .div5 { grid-area: 2 / 1 / 3 / 2; }
-    .div6 { grid-area: 2 / 2 / 3 / 3; }
-    .div7 { grid-area: 2 / 3 / 3 / 4; }
-    .div8 { grid-area: 2 / 4 / 3 / 5; }
-
-
-    .barra-contenedor {
-        width: 300px;
-        height: 10px;
-        background: #fcfcfc;
-        border-radius: 15px;
-        overflow: hidden;
-        border: 2px solid #fcfcfc;
+.barra-contenedor {
+    width: 90%;
+    max-width: 300px;
+    height: 10px;
+    background: #fcfcfc;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #fcfcfc;
+    margin: 10px auto;
+}
+.barra-progreso {
+    width: 22%;
+    height: 100%;
+    background: linear-gradient(to right, #a9c159, #cfdba4);
+    transition: width 0.5s ease-in-out;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
     }
-
-    .barra-progreso {
-        width: 22%; /* Progreso al 22% */
-        height: 100%;
-        background: linear-gradient(to right, #a9c159, #cfdba4);
-        text-align: center;
-        color: white;
-        font-weight: bold;
-        line-height: 30px;
-        border-radius: 15px 0 0 15px;
-        transition: width 0.5s ease-in-out;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
+    .parent {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
