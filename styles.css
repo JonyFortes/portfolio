@@ -144,10 +144,9 @@ p{
         margin: 0 auto;
         width: 80%;
     }
-  /*  nav ul {
-        flex-direction: column;
-        align-items: center; 
-    } */
+    nav ul {
+        gap: 0;
+    } 
     
     #pres-cont img {
         width: 80%;
