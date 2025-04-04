@@ -6,7 +6,7 @@
 body {
     background-color: #0c1124;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Noto Sans Gunjala Gondi", sans-serif;
 }
 header {
     background: linear-gradient(to bottom, #0c1124, #2e4f94);
@@ -36,7 +36,6 @@ nav ul li a:hover {
 }
 h1 {
     font-weight: 800;
-    font-style: italic;
     text-align: center;
     font-size: 48px;
 }
@@ -44,8 +43,7 @@ h1 {
     padding-top: 40px;
 }
 #pres-cont img {
-    width: 50%;
-    max-width: 200px;
+    width: 460px;
     display: block;
     margin: 20px auto;
     margin-bottom: 0;
@@ -62,9 +60,9 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 10px;
-    width: 90%;
-    max-width: 800px;
+    width: 50%;
     margin: 20px auto;
+    margin-bottom: 4%;
 }
 .parent div {
     text-align: center;
@@ -73,6 +71,11 @@ h2 {
     border: 2px solid #364375;
     background-color: #1d2851;
     border-radius: 5%;
+    font-weight: 800;
+}
+.parent div:hover{
+    
+    background-color: #364375;
 }
 .barra-contenedor {
     width: 90%;
@@ -85,10 +88,26 @@ h2 {
     margin: 10px auto;
 }
 .barra-progreso {
-    width: 22%;
+    width: 37%;
     height: 100%;
     background: linear-gradient(to right, #a9c159, #cfdba4);
     transition: width 0.5s ease-in-out;
+}
+.proyect_cont{
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    border: 2px solid #364375;
+    background-color: #1d2851;
+    font-weight: 800;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 350px;
+
+}
+.proyect_cont iframe{
+    float: left;
 }
 @media (max-width: 600px) {
     h1 {
