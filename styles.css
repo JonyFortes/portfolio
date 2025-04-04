@@ -147,7 +147,9 @@ p{
     nav ul {
         gap: 0;
     } 
-    
+    nav ul li a{
+        padding: 8px 12px;
+    }
     #pres-cont img {
         width: 80%;
         display: block;
