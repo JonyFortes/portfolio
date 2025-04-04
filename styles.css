@@ -88,7 +88,7 @@ h2 {
     margin: 10px auto;
 }
 .barra-progreso {
-    width: 37%;
+    width: 55%;
     height: 100%;
     background: linear-gradient(to right, #a9c159, #cfdba4);
     transition: width 0.5s ease-in-out;
@@ -101,23 +101,84 @@ h2 {
     background-color: #1d2851;
     font-weight: 800;
     width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
-    height: 350px;
+    margin: 30px auto;
+    height: auto;
 
 }
-.proyect_cont iframe{
-    float: left;
+h3{
+    font-size: 32px;
+    margin-bottom: 20px;
 }
-@media (max-width: 600px) {
+
+    #videos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    #videos-grid div{
+        margin: 0 auto;
+        padding: 3% 5%;
+        border: 2px solid #364375;
+        background-color: #364375;
+        width: 90%;
+        border-radius: 2%;
+    }
+    iframe{
+        width: -webkit-fill-available;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    p{
+        font-weight: 200;
+    }
+@media (max-width: 768px) {
     h1 {
         font-size: 32px;
+        margin: 0 auto;
+        width: 80%;
     }
-    nav ul {
+  /*  nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
+    } */
+    
+    #pres-cont img {
+        width: 80%;
+        display: block;
     }
     .parent {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
+        width: 90%;
     }
-}
+    .parent div img{
+    width: 100%;
+    }
+    .proyect_cont{
+        width: 98%;
+        padding: 15px 0px;
+    }
+    .proyect_cont iframe{
+        width: 100%;
+    }
+    #videos-grid {
+           display: grid;
+           grid-template-columns: repeat(1, 1fr);
+           width: 98%;
+           margin: 0 auto;
+       }
+    #videos-grid div{
+        margin-bottom: 20px;
+        padding: 3% 1%;
+        width: 100%;
+    } 
+    #videos-grid div p{
+        font-size: 12px;
+    }
+    p{
+        padding: 0 1%;
+        text-align: justify;
+    }  
+    }
