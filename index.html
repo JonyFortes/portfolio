@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Fortes Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=1.2.5">
+    <link rel="stylesheet" href="assets/styles/styles.css?v=1.3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Roboto:ital,wdth@0,75..100;1,75..100&display=swap" rel="stylesheet">
@@ -18,8 +18,8 @@
             
             <nav>
                 <ul>
-                    <li><a href="#">PROYECTOS</a></li>
-                    <li><a href="#">SKILLS</a></li>
+                    <li><a id="proyectos-btn">PROYECTOS</a></li>
+                    <li><a id="skills-btn">SKILLS</a></li>
                     <li><a href="#">SOBRE MI</a></li>
                 </ul>
             </nav>
@@ -28,57 +28,58 @@
     </header>
     <main>
         <section> 
-            <!--
-            <h2>MIS SKILLS</h2>
-            <div class="parent">
-                <div><img src="html5.png"><p>HTML5</p></div>
-                <div><img src="css3.png"><p>CSS3</p></div>
-                <div><img src="js.png"><p>JavaScript</p></div>
-                <div><img src="illustrator.png"><p>Illustrator</p></div>
-                <div><img src="photoshop.png"><p>Photoshop</p></div>
-                <div><img src="premiere.png"><p>Premiere</p></div>
-                <div><img src="aftereffects.png"><p>After Effects</p></div>
-                <div><img src="indesing.png"><p>InDesign</p></div>
+            <div id="skills">
+                <h2>MIS SKILLS</h2>
+                <div class="parent">
+                    <div><img src="html5.png"><p>HTML5</p></div>
+                    <div><img src="css3.png"><p>CSS3</p></div>
+                    <div><img src="js.png"><p>JavaScript</p></div>
+                    <div><img src="illustrator.png"><p>Illustrator</p></div>
+                    <div><img src="photoshop.png"><p>Photoshop</p></div>
+                    <div><img src="premiere.png"><p>Premiere</p></div>
+                    <div><img src="aftereffects.png"><p>After Effects</p></div>
+                    <div><img src="indesing.png"><p>InDesign</p></div>
+                </div>
             </div>
-            -->
+            <div id="proyectos">
+                <h2>MIS PROYECTOS</h2>
+                <div class="proyect_cont">
+                    <h3 id="VerVideos">
+                    VIDEOS
+                    </h3>
+                    <div id="videos-grid">
+                        <div class="videos" id="vid1">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wrZSnsWEdyU?si=oAKR4TgariOeQdGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <span>Veneno - Videoclip</span><br>
+                            <p><br>
+                                Videoclip creado como reinterpretación visual de la canción "Veneno" del artista argentino Emanero. La pieza combina recursos gráficos y audiovisuales para acompañar el ritmo y el mensaje del tema, aportando una estética de pixelart.
+                                
+                                Para su realización utilicé herramientas de diseño y edición como Adobe Illustrator y Photoshop (para la creación de ilustraciones y elementos visuales), y Premiere Pro junto con After Effects para el montaje, la edición y la incorporación de efectos de animación.
+                                
+                                El resultado es un video dinámico, con una identidad visual marcada, pensado tanto desde lo técnico como desde lo expresivo. </p>
+                        </div>
+                        <div class="videos" id="vid2"> 
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xqMWimbKvrE?si=cehSnAgmB2X5PLbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <span>Oda a la Alegría - Coro SMT</span><br>
+                            <p><br>
+                                Este proyecto consistió en la dirección y edición integral de una presentación en vivo del Coro SMT, interpretando la canción “Oda a la Alegría”. Se trata de una propuesta audiovisual donde busqué capturar no solo el sonido coral, sino también la calidez humana y reflejar una calma cristiana (ya que se trataba de un coro religioso).
 
+                                Trabajé de forma individual como director, camarógrafo y montajista, realizando la cobertura con múltiples cámaras, distintos tipos de micrófonos y una combinación de tomas fijas y en movimiento para lograr un registro dinámico y sensible.
 
-            <h2>MIS PROYECTOS</h2>
-            <div class="proyect_cont">
-                <h3 id="VerVideos">
-                   VIDEOS
-                </h3>
-                <div id="videos-grid">
-                    <div class="videos" id="vid1">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wrZSnsWEdyU?si=oAKR4TgariOeQdGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <span>Veneno - Videoclip</span><br>
-                        <p><br>
-                            Videoclip creado como reinterpretación visual de la canción "Veneno" del artista argentino Emanero. La pieza combina recursos gráficos y audiovisuales para acompañar el ritmo y el mensaje del tema, aportando una estética de pixelart.
-                            
-                            Para su realización utilicé herramientas de diseño y edición como Adobe Illustrator y Photoshop (para la creación de ilustraciones y elementos visuales), y Premiere Pro junto con After Effects para el montaje, la edición y la incorporación de efectos de animación.
-                            
-                            El resultado es un video dinámico, con una identidad visual marcada, pensado tanto desde lo técnico como desde lo expresivo. </p>
+                                Para los elementos gráficos (títulos, logos y placas) utilicé Illustrator y Photoshop, y todo el montaje, corrección de color y mezcla de sonido fue realizado en Premiere Pro.
+
+                                El resultado es un video que busca resaltar la potencia colectiva del coro y su vínculo con la comunidad, con una estética sobria y cercana.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="proyect_cont">
+                    <h3 id="VerDiseños">DISEÑOS</h3>
+                    <div id="DiseñosGrid">
+                        <div class="diseños"><img src="assets/imgs/animales.jpg"></div>
+                        <div  class="diseños"><img src="assets/imgs/flyer1.jpg"></div>
+                        <div  class="diseños"><img src="assets/imgs/fondo-vaporwave.jpg"></div>
                     </div>
-                    <div class="videos" id="vid2"> 
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xqMWimbKvrE?si=cehSnAgmB2X5PLbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <span>Oda a la Alegría - Coro SMT</span><br>
-                        <p><br>
-                            Este proyecto consistió en la dirección y edición integral de una presentación en vivo del Coro SMT, interpretando la canción “Oda a la Alegría”. Se trata de una propuesta audiovisual donde busqué capturar no solo el sonido coral, sino también la calidez humana y reflejar una calma cristiana (ya que se trataba de un coro religioso).
-
-                            Trabajé de forma individual como director, camarógrafo y montajista, realizando la cobertura con múltiples cámaras, distintos tipos de micrófonos y una combinación de tomas fijas y en movimiento para lograr un registro dinámico y sensible.
-
-                            Para los elementos gráficos (títulos, logos y placas) utilicé Illustrator y Photoshop, y todo el montaje, corrección de color y mezcla de sonido fue realizado en Premiere Pro.
-
-                            El resultado es un video que busca resaltar la potencia colectiva del coro y su vínculo con la comunidad, con una estética sobria y cercana.
-                        </p>
-                    </div>
-                </div>    
-            </div>
-            <div class="proyect_cont">
-                <h3 id="VerDiseños">DISEÑOS</h3>
-                <div id="DiseñosGrid">
-                    <div class="diseños"><img src="assets/imgs/animales.jpg"></div>
-                    <div  class="diseños"><img src="assets/imgs/flyer1.jpg"></div>
                 </div>
             </div>
         </section>
@@ -86,6 +87,12 @@
 </body>
 </html>
 <script>
+    //fade in al cargar
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("fade-in");
+    });
+
+    //click en los rectangulos de proyectos
     document.getElementById("VerVideos").addEventListener("click", function() {
         let videos = document.getElementsByClassName("videos");
         
@@ -109,5 +116,29 @@
         }
         }
         this.classList.toggle("abierto");
+    });
+    
+    // Cambiar a la página de Skills
+    document.getElementById("skills-btn").addEventListener("click", function () {
+        const proyectos = document.getElementById("proyectos");
+        const skills = document.getElementById("skills");
+
+        proyectos.classList.remove("abierto");
+        proyectos.classList.add("cerrado");
+
+        skills.classList.remove("cerrado");
+        skills.classList.add("abierto");
+    });
+
+    // Cambiar a la página de Proyectos
+    document.getElementById("proyectos-btn").addEventListener("click", function () {
+        const proyectos = document.getElementById("proyectos");
+        const skills = document.getElementById("skills");
+
+        skills.classList.remove("abierto");
+        skills.classList.add("cerrado");
+
+        proyectos.classList.remove("cerrado");
+        proyectos.classList.add("abierto");
     });
 </script>
