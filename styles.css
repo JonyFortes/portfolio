@@ -3,9 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to bottom, #0c1124, #2e4f94);
-    color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;color: white;
     font-family: "Noto Sans Gunjala Gondi", sans-serif;
 }
 header {
@@ -110,16 +115,19 @@ h2 {
     height: auto;
 
 }
-h3{
-    font-size: 32px;
-    margin-bottom: 20px;
+.videos{
+    display: none;
 }
+
+
 
 #videos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    background-color: #364375;
+    border: 3px solid #8193d757;
 }
 #videos-grid div{
     margin: 0 auto;
@@ -128,6 +136,88 @@ h3{
     background-color: #364375;
     width: 90%;
 }
+#VerVideos::before{
+    content: "▶";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    color: #6e7fc1;
+}
+#VerVideos::after{
+    content: "◀";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    color: #6e7fc1;
+
+}
+#VerVideos.abierto::before {
+    content: "▼";
+  }
+#VerVideos.abierto::after {
+    content: "▼";
+  }
+#VerDiseños::after{
+    content: "◀";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    color: #6e7fc1;
+}
+#VerDiseños::before{
+    content: "▶";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    color: #6e7fc1;
+}
+
+#VerDiseños.abierto::before {
+    content: "▼";
+}
+#VerDiseños.abierto::after {
+    content: "▼";
+  }
+#DiseñosGrid{
+    background-color: #364375;
+    border: 3px solid #8193d757;
+}
+.diseños{
+    display: none;
+    padding-top: 16px;
+}
+
+
+  .proyect_cont img{
+    cursor: pointer;
+    margin-bottom: 20px;
+    overflow:hidden;
+}
+.proyect_cont img:hover {
+    filter: opacity(.8);
+    transition:all .5s ease-in-out;
+}
+
+h3{
+    font-size: 32px;
+    margin-bottom: 20px;
+    user-select: none;
+    position: relative;
+    padding-left: 30px; /* espacio para la flecha */
+    text-align: center;
+}
+h3:hover{
+    cursor: pointer;
+}
+
 iframe{
     width: -webkit-fill-available;
     margin-top: 5px;
@@ -187,4 +277,10 @@ p{
         padding: 0 1%;
         text-align: justify;
     }  
-    }
+    .diseños img{
+        width: 95%;
+        margin: 15px auto;
+
+    } 
+
+}

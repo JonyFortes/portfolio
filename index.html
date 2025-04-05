@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Fortes Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=1.2.2.1">
+    <link rel="stylesheet" href="styles.css?v=1.2.5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Roboto:ital,wdth@0,75..100;1,75..100&display=swap" rel="stylesheet">
@@ -45,11 +45,11 @@
 
             <h2>MIS PROYECTOS</h2>
             <div class="proyect_cont">
-                <h3>
-                    VIDEOS
+                <h3 id="VerVideos">
+                   VIDEOS
                 </h3>
                 <div id="videos-grid">
-                    <div id="vid1">
+                    <div class="videos" id="vid1">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/wrZSnsWEdyU?si=oAKR4TgariOeQdGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <span>Veneno - Videoclip</span><br>
                         <p><br>
@@ -59,7 +59,7 @@
                             
                             El resultado es un video dinámico, con una identidad visual marcada, pensado tanto desde lo técnico como desde lo expresivo. </p>
                     </div>
-                    <div id="vid2"> 
+                    <div class="videos" id="vid2"> 
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/xqMWimbKvrE?si=cehSnAgmB2X5PLbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <span>Oda a la Alegría - Coro SMT</span><br>
                         <p><br>
@@ -75,11 +75,39 @@
                 </div>    
             </div>
             <div class="proyect_cont">
-                <h3>DISEÑOS</h3>
+                <h3 id="VerDiseños">DISEÑOS</h3>
+                <div id="DiseñosGrid">
+                    <div class="diseños"><img src="assets/imgs/animales.jpg"></div>
+                    <div  class="diseños"><img src="assets/imgs/flyer1.jpg"></div>
+                </div>
             </div>
         </section>
     </main>
 </body>
 </html>
-
-</html>
+<script>
+    document.getElementById("VerVideos").addEventListener("click", function() {
+        let videos = document.getElementsByClassName("videos");
+        
+        for (let i = 0; i < videos.length; i++) {
+        if (videos[i].style.display === "none" || videos[i].style.display === "") {
+            videos[i].style.display = "block";
+        } else {
+            videos[i].style.display = "none";
+        }
+        }
+        this.classList.toggle("abierto");
+    });
+    document.getElementById("VerDiseños").addEventListener("click", function() {
+        let videos = document.getElementsByClassName("diseños");
+        
+        for (let i = 0; i < videos.length; i++) {
+        if (videos[i].style.display === "none" || videos[i].style.display === "") {
+            videos[i].style.display = "block";
+        } else {
+            videos[i].style.display = "none";
+        }
+        }
+        this.classList.toggle("abierto");
+    });
+</script>
