@@ -1,13 +1,12 @@
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Fortes Portfolio</title>
-    <link rel="stylesheet" href="assets/styles/styles.css?v=1.4">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Roboto:ital,wdth@0,75..100;1,75..100&display=swap" rel="stylesheet">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Fortes Portfolio</title>
+  <link rel="stylesheet" href="assets/styles/styles.css?v=1.4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <span style="display: block; text-align: center; font-weight: bold;">PÁGINA EN CONSTRUCCIÓN</span>
@@ -20,7 +19,7 @@
       <ul>
         <li><a id="proyectos-btn">PROYECTOS</a></li>
         <li><a id="skills-btn">SKILLS</a></li>
-        <li><a href="#">SOBRE MI</a></li>
+       <!-- <li><a href="#">SOBRE MI</a></li>-->
       </ul>
     </nav>
   </header>
@@ -50,18 +49,40 @@
           <iframe src="https://www.youtube.com/embed/xqMWimbKvrE" allowfullscreen></iframe>
           <p><strong>Oda a la Alegría - Coro SMT</strong><br>Dirección y edición de un concierto coral. Grabación multicámara, diseño gráfico y montaje audiovisual.</p>
         </div>
+        <div class="videos">
+            <iframe src="https://www.youtube.com/embed/iDTjyiT-FQA?si=8VEUU5_KUmOiYiu6" allowfullscreen></iframe>
+          <p><strong>Plena Madrugada - Marotte</strong><br>Sesión en vivo de Marotte y su banda para Yira Yira Cultura, donde me empeñe en la dirección y la edición del video.</p>
+        </div>
       </div>
       <div class="proyect_cont">
         <h3 id="VerDiseños">DISEÑOS</h3>
         <div class="diseños"><img src="assets/imgs/animales.jpg"></div>
         <div class="diseños"><img src="assets/imgs/flyer1.jpg"></div>
+        <div class="diseños"><img src="assets/imgs/gatito.png"></div>
         <div class="diseños"><img src="assets/imgs/fondo-vaporwave.jpg"></div>
+      </div>
+      <div class="proyect_cont">
+        <h3 id="VerWebs">WEBS</h3>
+        <div class="webs"><img src="assets/imgs/rhythmm-web.jpg"></div>
+        <div class="webs"><img src="assets/imgs/corosmt-web.jpg"></div>
       </div>
     </section>
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("fade-in");
+
+      const toggleSection = (btnId, className) => {
+        document.getElementById(btnId).addEventListener("click", () => {
+          document.querySelectorAll(`.${className}`).forEach(el => {
+            el.style.display = el.style.display === "block" ? "none" : "block";
+          });
+
+          const btn = document.getElementById(btnId);
+          btn.classList.toggle("abierto");
+          btn.classList.toggle("cerrado");
+        });
+      };
 
       document.getElementById("skills-btn").addEventListener("click", () => {
         document.getElementById("skills").classList.replace("cerrado", "abierto");
@@ -73,17 +94,9 @@
         document.getElementById("proyectos").classList.replace("cerrado", "abierto");
       });
 
-      document.getElementById("VerVideos").addEventListener("click", () => {
-        document.querySelectorAll(".videos").forEach(el => {
-          el.style.display = el.style.display === "block" ? "none" : "block";
-        });
-      });
-
-      document.getElementById("VerDiseños").addEventListener("click", () => {
-        document.querySelectorAll(".diseños").forEach(el => {
-          el.style.display = el.style.display === "block" ? "none" : "block";
-        });
-      });
+      toggleSection("VerVideos", "videos");
+      toggleSection("VerDiseños", "diseños");
+      toggleSection("VerWebs", "webs");
     });
   </script>
 </body>
