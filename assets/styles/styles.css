@@ -3,51 +3,60 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
+    color: #f0f0f0;
     transition: opacity 1s ease-in-out;
     opacity: 0;
   }
+
   body.fade-in {
     opacity: 1;
   }
+
   header {
     text-align: center;
     padding: 50px 20px 30px;
   }
+
   header h1 {
-    font-size: 42px;
+    font-size: 3rem;
     font-weight: 700;
   }
+
   header span {
-    font-size: 20px;
-    color: #b6f7a7;
+    font-size: 1.2rem;
+    color: #aadfb7;
   }
+
   nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     list-style: none;
     margin-top: 30px;
     flex-wrap: wrap;
   }
+
   nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid #def398;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid #aadfb7;
+    border-radius: 12px;
+    color: #f0f0f0;
+    font-weight: 600;
     transition: all 0.3s;
     cursor: pointer;
   }
+
   nav ul li a:hover {
-    background-color: #def398;
-    color: #000;
+    background-color: #aadfb7;
+    color: #1a1a1a;
   }
+
   .barra-contenedor {
     width: 80%;
     height: 10px;
@@ -56,20 +65,24 @@
     overflow: hidden;
     margin: 10px auto 30px;
   }
+
   .barra-progreso {
-    width: 65%;
+    width: 75%;
     height: 100%;
-    background: linear-gradient(to right, #a9c159, #cfdba4);
+    background: linear-gradient(to right, #aadfb7, #cde7d8);
   }
+
   main {
     padding: 20px;
   }
+
   section h2 {
     text-align: center;
-    color: #def398;
-    font-size: 32px;
+    color: #aadfb7;
+    font-size: 2rem;
     margin: 40px 0 20px;
   }
+
   .parent {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -77,72 +90,112 @@
     max-width: 800px;
     margin: 0 auto 60px;
   }
+
   .parent div {
     text-align: center;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 15px;
     border-radius: 12px;
     transition: background 0.3s;
   }
+
   .parent div:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
   }
+
   .parent img {
     width: 50px;
     margin-bottom: 10px;
   }
+
   .proyect_cont {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
   }
-  .proyect_cont:hover{
-    background-color: rgba(255, 255, 255, 0.116);
-  } 
+
+  .proyect_cont:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
   .proyect_cont h3 {
-    font-size: 28px;
+    font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
     cursor: pointer;
+    position: relative;
+    padding-left: 34px;
   }
-  .videos, .diseños {
+
+  h3::before {
+    content: url(../imgs/arrow.svg);
+    position: absolute;
+    left: 20;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    transform: rotate(0deg);
+    opacity: 65%;
+    transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
+  }
+
+  #VerVideos.abierto::before,
+  #VerDiseños.abierto::before,
+  #VerWebs.abierto::before {
+    transform: rotate(90deg);
+    opacity: 100%;
+  }
+
+  .videos,
+  .diseños,
+  .webs {
     display: none;
     margin: 10px auto;
   }
-  .videos iframe, .diseños img {
+
+  .videos iframe,
+  .diseños img,
+  .webs img {
     width: 100%;
     border-radius: 10px;
   }
+
+  .videos iframe {
+    height: 300px;
+  }
+  h3{
+    user-select: none;
+  }
   .videos p {
-    margin-top: 10px;
+    background-color: #345763;
+    padding: 25px 18px;
     font-weight: 300;
     text-align: justify;
     margin-bottom: 24px;
   }
-  .diseños img {
-    margin: 10px 0;
+
+  .webs {
+    width: 80%;
   }
-  #skills{
+
+  #skills,
+  #proyectos {
     display: none;
   }
-  #proyectos.abierto{
+
+  #skills.abierto,
+  #proyectos.abierto {
     display: block;
   }
-  #proyectos.cerrado{
-    display: none;
-  }
-  #skills.abierto{
-    display: block;
-  }
-  #skills.cerrado{
-    display: none;
-  }
+
   @media (max-width: 768px) {
     header h1 {
-      font-size: 30px;
+      font-size: 2rem;
     }
+
     nav ul li a {
       padding: 8px 16px;
     }
